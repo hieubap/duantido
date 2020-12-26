@@ -1,8 +1,8 @@
-package Things;
+package objectgame;
 
 import java.awt.*;
 
-public interface Thing {
+public interface ObjectGame {
     public void update();
     public void draw(Graphics g);
 }

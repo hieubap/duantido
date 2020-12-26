@@ -1,4 +1,7 @@
-package Primary;
+package origin.controller;
+
+import origin.EnvironmentConfig;
+import origin.controller.MainController;
 
 public class ThreadGame extends Thread{
     private MainController mainController;
@@ -20,7 +23,6 @@ public class ThreadGame extends Thread{
 
             try {
                 sleep(EnvironmentConfig.DELAYPROCESS-timeComplete);
-//                sleep(1);
             } catch (InterruptedException e) {
 
                 e.printStackTrace();

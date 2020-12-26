@@ -1,12 +1,12 @@
-package Things;
+package objectgame;
 
-import Primary.Camera;
-import Primary.EnvironmentConfig;
-import Primary.Picture;
+import origin.Camera;
+import origin.EnvironmentConfig;
+import origin.Picture;
 
 import java.awt.*;
 
-public class Ball implements Thing {
+public class Ball implements ObjectGame {
     public float positionX, positionY, radius, speed = 10;
     public Color color = new Color((int) (Math.random() * 0xFFFFFF));
     private Camera camera;

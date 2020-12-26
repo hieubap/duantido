@@ -1,4 +1,4 @@
-package Primary;
+package origin;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
