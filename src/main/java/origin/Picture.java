@@ -4,8 +4,11 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferInt;
+import java.awt.image.Raster;
 import java.io.File;
 import java.io.IOException;
+import java.nio.Buffer;
 
 public class Picture {
     public static String resourcePath = EnvironmentConfig.PATHRESOUREASSET;
@@ -18,7 +21,7 @@ public class Picture {
     public static BufferedImage waterShotImage;
 
     static {
-        normalShotImage = Picture.loadImage("/ball.png");
+        normalShotImage = eraserBackgroundImage(Picture.loadImage("/ball.png"),0xFFFFFFFF);
 
         earthShotImage = Picture.loadImage("/earthball.png");
         fireShotImage = Picture.loadImage("/fireball.jpg");
@@ -33,7 +36,7 @@ public class Picture {
         try {
             BufferedImage loadedImage = ImageIO.read(new File(resourcePath+path));
             BufferedImage formatImage = new BufferedImage(loadedImage.getWidth(),
-                    loadedImage.getHeight(),BufferedImage.TYPE_INT_RGB);
+                    loadedImage.getHeight(),BufferedImage.TYPE_INT_ARGB);
 
             formatImage.getGraphics().drawImage(loadedImage,0,0,null);
 
@@ -43,6 +46,17 @@ public class Picture {
             e.printStackTrace();
             return null;
         }
+    }
+    public static BufferedImage eraserBackgroundImage(BufferedImage image,int rgb){
+        int[] data = ((DataBufferInt)image.getRaster().getDataBuffer()).getData();
+
+        for (int i = 0;i<data.length;i++){
+            if (data[i] == rgb){
+                data[i] = 0;
+//                System.out.print(""+data[i]);
+            }
+        }
+        return image;
     }
     public static BufferedImage flipVertical(BufferedImage image) {
         BufferedImage buffer = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_ARGB);
