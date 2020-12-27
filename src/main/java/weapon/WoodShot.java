@@ -1,22 +1,21 @@
 package weapon;
 
 
-
-import image.WaterShotImage;
-import image.WoodShotImage;
-import primary.EnvironmentConfig;
-import image.NormalShotImage;
+import objectgame.ObjectGame;
+import origin.EnvironmentConfig;
+import origin.Picture;
 
 import java.awt.*;
 
-public class WoodShot implements Weapon {
+public class WoodShot implements ObjectGame {
+    private final int pixel = EnvironmentConfig.PIXEL;
+    private double speed = EnvironmentConfig.SPEED_WOOD_SHOT;
+
     private double positionX;
     private double positionY;
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = 10;
-    private Direction direction;
+    private DirectionWeapon direction;
 
-    public WoodShot(double positionX, double positionY, Direction direction) {
+    public WoodShot(double positionX, double positionY, DirectionWeapon direction) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.direction = direction;
@@ -49,6 +48,11 @@ public class WoodShot implements Weapon {
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(WoodShotImage.ballImage, (int) positionX, (int) positionY, pixel, pixel, null);
+        g.drawImage(Picture.woodShotImage, (int) positionX, (int) positionY, pixel, pixel, null);
+    }
+
+    @Override
+    public boolean isRemove() {
+        return false;
     }
 }

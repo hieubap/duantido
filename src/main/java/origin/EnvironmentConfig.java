@@ -1,4 +1,4 @@
-package primary;
+package origin;
 
 public class EnvironmentConfig {
     // environment
@@ -18,6 +18,14 @@ public class EnvironmentConfig {
     public static final int SPEED_PLAYER = 10;
     public static final int SPEED_CAMERA = 10;
     public static final int SPEED_ENEMY = 5;
+    public static final int SPEED_SHOT = 2;
+    public static final int SPEED_NORMAL_SHOT = SPEED_SHOT;
+    public static final int SPEED_FIRE_SHOT = SPEED_SHOT;
+    public static final int SPEED_WATER_SHOT = SPEED_SHOT;
+    public static final int SPEED_EARTH_SHOT = SPEED_SHOT;
+    public static final int SPEED_METAL_SHOT = SPEED_SHOT;
+    public static final int SPEED_WOOD_SHOT = SPEED_SHOT;
 
-
+    // distance
+    public static final int RANGE_TO_CAMERA_MOVE = 200;
 }

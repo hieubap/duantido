@@ -1,19 +1,20 @@
 package weapon;
 
-import image.FireShotImage;
-
-import primary.EnvironmentConfig;
+import objectgame.ObjectGame;
+import origin.EnvironmentConfig;
+import origin.Picture;
 
 import java.awt.*;
 
-public class FireShot implements Weapon{
+public class FireShot implements ObjectGame {
+    private final int pixel = EnvironmentConfig.PIXEL;
+    private double speed = EnvironmentConfig.SPEED_FIRE_SHOT;
+
     private double positionX;
     private double positionY;
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = 10;
-    private Direction direction;
+    private DirectionWeapon direction;
 
-    public FireShot(double positionX, double positionY, Direction direction) {
+    public FireShot(double positionX, double positionY, DirectionWeapon direction) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.direction = direction;
@@ -46,6 +47,11 @@ public class FireShot implements Weapon{
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(FireShotImage.ballImage, (int) positionX, (int) positionY, pixel*4, pixel*3, null);
+        g.drawImage(Picture.fireShotImage, (int) positionX, (int) positionY, pixel*4, pixel*3, null);
+    }
+
+    @Override
+    public boolean isRemove() {
+        return false;
     }
 }

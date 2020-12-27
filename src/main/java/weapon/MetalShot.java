@@ -1,24 +1,22 @@
 package weapon;
 
 
-
-
-
-import image.MetalShotImage;
-import image.WaterShotImage;
-import primary.EnvironmentConfig;
-import image.NormalShotImage;
+import objectgame.ObjectGame;
+import origin.EnvironmentConfig;
+import origin.Picture;
 
 import java.awt.*;
 
-public class MetalShot implements Weapon {
+public class MetalShot implements ObjectGame {
+    private final int pixel = EnvironmentConfig.PIXEL;
+    private final double speed = EnvironmentConfig.SPEED_METAL_SHOT;
+
     private double positionX;
     private double positionY;
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = 10;
-    private Direction direction;
 
-    public MetalShot(double positionX, double positionY, Direction direction) {
+    private DirectionWeapon direction;
+
+    public MetalShot(double positionX, double positionY, DirectionWeapon direction) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.direction = direction;
@@ -51,6 +49,11 @@ public class MetalShot implements Weapon {
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(MetalShotImage.ballImage, (int) positionX, (int) positionY, pixel, pixel, null);
+        g.drawImage(Picture.metalShotImage, (int) positionX, (int) positionY, pixel, pixel, null);
+    }
+
+    @Override
+    public boolean isRemove() {
+        return false;
     }
 }

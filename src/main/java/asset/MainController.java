@@ -1,8 +1,8 @@
 package asset;
 
 
-import objectgame.Ball;
-import primary.EnvironmentConfig;
+import origin.Camera;
+import origin.EnvironmentConfig;
 import weapon.*;
 
 import javax.swing.*;
@@ -13,8 +13,6 @@ import java.awt.event.ActionListener;
 public class MainController extends JPanel implements ActionListener {
     private int NUMBERBALL = 2;
 //    private Camera camera;
-
-    private Ball[] ball;
     private JFrame frame;
     private NormalShot normalShot;
     private FireShot fireShot;
@@ -25,26 +23,16 @@ public class MainController extends JPanel implements ActionListener {
 
 
     public MainController() {
-        normalShot = new NormalShot(EnvironmentConfig.WIDTH / 2, 100, Direction.RIGHT);
-        fireShot = new FireShot(EnvironmentConfig.WIDTH / 2, 200, Direction.LEFT);
-        waterShot = new WaterShot(EnvironmentConfig.WIDTH / 2, 300, Direction.RIGHT);
-        earthShot = new EarthShot(EnvironmentConfig.WIDTH / 2, 400, Direction.LEFT);
-        metalShot = new MetalShot(EnvironmentConfig.WIDTH / 2, 500, Direction.RIGHT);
-        woodShot = new WoodShot(EnvironmentConfig.WIDTH / 2, 600, Direction.LEFT);
+        normalShot = new NormalShot(EnvironmentConfig.WIDTH / 2, 100, DirectionWeapon.RIGHT,new Camera(0,0));
+        fireShot = new FireShot(EnvironmentConfig.WIDTH / 2, 200, DirectionWeapon.LEFT);
+        waterShot = new WaterShot(EnvironmentConfig.WIDTH / 2, 300, DirectionWeapon.RIGHT);
+        earthShot = new EarthShot(EnvironmentConfig.WIDTH / 2, 400, DirectionWeapon.LEFT);
+        metalShot = new MetalShot(EnvironmentConfig.WIDTH / 2, 500, DirectionWeapon.RIGHT);
+        woodShot = new WoodShot(EnvironmentConfig.WIDTH / 2, 600, DirectionWeapon.LEFT);
 //
 //        camera = new Camera(0, 0);
 //        this.setFocusable(true);
 //        addKeyListener(camera);
-
-        ball = new Ball[NUMBERBALL];
-
-        for (int i = 0; i < NUMBERBALL; i++) {
-            double x = Math.random() * (EnvironmentConfig.WIDTH - 100);
-            double y = Math.random() * (EnvironmentConfig.HEIGHT - 100);
-//            ball[i] = new Ball((float) x, (float) y, camera);
-        }
-        Timer timer = new Timer(40, this);
-        timer.start();
 
         frame = new JFrame("T.A.N.K");
 

@@ -1,6 +1,6 @@
 package weapon;
 
-public enum Direction {
+public enum DirectionWeapon {
     LEFT,
     RIGHT,
     UP,

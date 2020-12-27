@@ -1,22 +1,22 @@
 package weapon;
 
 
-
-import image.EarthShotImage;
-import image.WaterShotImage;
-import primary.EnvironmentConfig;
-import image.NormalShotImage;
+import objectgame.ObjectGame;
+import origin.EnvironmentConfig;
+import origin.Picture;
 
 import java.awt.*;
 
-public class EarthShot implements Weapon {
+public class EarthShot implements ObjectGame {
+    private final double speed = EnvironmentConfig.SPEED_EARTH_SHOT;
+    private final int pixel = EnvironmentConfig.PIXEL;
+
     private double positionX;
     private double positionY;
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = 10;
-    private Direction direction;
 
-    public EarthShot(double positionX, double positionY, Direction direction) {
+    private DirectionWeapon direction;
+
+    public EarthShot(double positionX, double positionY, DirectionWeapon direction) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.direction = direction;
@@ -49,6 +49,11 @@ public class EarthShot implements Weapon {
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(EarthShotImage.ballImage, (int) positionX, (int) positionY, pixel, pixel, null);
+        g.drawImage(Picture.earthShotImage, (int) positionX, (int) positionY, pixel, pixel, null);
+    }
+
+    @Override
+    public boolean isRemove() {
+        return false;
     }
 }
