@@ -3,7 +3,7 @@ package objectgame.enemy;
 import objectgame.Direction;
 import objectgame.ObjectGame;
 import origin.Camera;
-import origin.EnvironmentConfig;
+import primary.EnvironmentConfig;
 
 import java.awt.*;
 

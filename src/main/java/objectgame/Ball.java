@@ -1,7 +1,7 @@
 package objectgame;
 
 import origin.Camera;
-import origin.EnvironmentConfig;
+import primary.EnvironmentConfig;
 import origin.Picture;
 
 import java.awt.*;

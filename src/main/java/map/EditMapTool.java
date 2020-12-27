@@ -1,7 +1,7 @@
 package map;
 
 import origin.Camera;
-import origin.EnvironmentConfig;
+import primary.EnvironmentConfig;
 import origin.Picture;
 
 import java.awt.*;
@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import static origin.EnvironmentConfig.*;
+import static primary.EnvironmentConfig.*;
 
 public class EditMapTool extends MouseAdapter implements KeyListener {
     private final int PIXEL = EnvironmentConfig.PIXEL;
