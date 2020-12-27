@@ -1,6 +1,5 @@
 package origin.controller;
 
-import map.Map;
 import objectgame.Ball;
 import map.EditMapTool;
 import objectgame.ObjectGame;
@@ -16,24 +15,28 @@ import java.util.List;
 
 public class MainController extends JPanel {
     private Camera camera;
-    Map map;
+    private EditMapTool map;
 
     private Ball[] ball;
     private JFrame frame;
     private List<ObjectGame> objectGameList;
 
     public MainController() {
-        camera = new Camera(0, 0);
-        map = new Map(camera);
+        map = new EditMapTool();
+
+        Player player = new Player(EnvironmentConfig.WIDTH/2-100, EnvironmentConfig.HEIGHT/2,map);
+        camera = player.getCamera();
+        map.setCamera(camera);
 
         objectGameList = new ArrayList<>();
-        Player player = new Player(100, 100,camera);
         objectGameList.add(player);
-        objectGameList.add(new Enemy(100,100,camera));
+        objectGameList.add(new Enemy(100,300,camera, map));
 
         this.setFocusable(true);
         addKeyListener(camera);
+        addKeyListener(map);
         addKeyListener(player);
+        addMouseListener(map);
 
         // set frame
         frame = new JFrame("T.A.N.K");
