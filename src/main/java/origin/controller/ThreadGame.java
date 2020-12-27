@@ -1,7 +1,6 @@
 package origin.controller;
 
-import origin.EnvironmentConfig;
-import origin.controller.MainController;
+import primary.EnvironmentConfig;
 
 public class ThreadGame extends Thread{
     private MainController mainController;

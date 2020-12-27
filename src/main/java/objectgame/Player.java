@@ -2,7 +2,7 @@ package objectgame;
 
 import map.Map;
 import origin.Camera;
-import origin.EnvironmentConfig;
+import primary.EnvironmentConfig;
 
 import java.awt.*;
 import java.awt.event.KeyAdapter;

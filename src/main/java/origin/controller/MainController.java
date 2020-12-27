@@ -1,12 +1,11 @@
 package origin.controller;
 
 import objectgame.Ball;
-import map.EditMapTool;
 import objectgame.ObjectGame;
 import objectgame.Player;
 import objectgame.enemy.Enemy;
 import origin.Camera;
-import origin.EnvironmentConfig;
+import primary.EnvironmentConfig;
 
 import javax.swing.*;
 import java.awt.*;

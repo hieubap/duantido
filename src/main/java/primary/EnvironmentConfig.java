@@ -1,4 +1,4 @@
-package origin;
+package primary;
 
 public class EnvironmentConfig {
     // environment
