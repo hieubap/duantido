@@ -36,7 +36,7 @@ public class MetalShot implements Weapon {
 
     @Override
     public void update() {
-        if (positionX < -200 || positionX > 100* EnvironmentVariable.PIXEL || positionY < -200 || positionY > 100* EnvironmentVariable.PIXEL)
+        if (positionX < 300 || positionX > 100* EnvironmentVariable.PIXEL || positionY < 100 || positionY > 100* EnvironmentVariable.PIXEL)
             isRemove = true;
 
         switch (direction) {

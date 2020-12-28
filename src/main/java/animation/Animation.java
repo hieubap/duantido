@@ -56,7 +56,6 @@ public class Animation implements ObjectGame {
             }
         }
     }
-
     @Override
     public void draw(Graphics g) {
         g.drawImage(getSprite(index), (int) (positionX - camera.positionX), (int) (positionY - camera.positionY), null);

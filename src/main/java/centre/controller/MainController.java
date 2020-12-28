@@ -54,17 +54,18 @@ public class MainController extends JPanel {
         weaponList = new ArrayList<>();
         enemyList = new ArrayList<>();
 
+        for (int i=0;i<10;i++)
         enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
-        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
+//        enemyList.add(new Enemy(100, 300, camera, map));
 
         objectGameList.add(new Box( 100, 100, PIXEL, PIXEL, 7, camera, 7));
         objectGameList.add(new Box( 300, 100, PIXEL, PIXEL, 7, camera, 18));
