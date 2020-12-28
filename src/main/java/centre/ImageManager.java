@@ -1,18 +1,19 @@
-package origin;
+package centre;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
-import java.awt.image.Raster;
 import java.io.File;
 import java.io.IOException;
-import java.nio.Buffer;
 
-public class Picture {
-    public static String resourcePath = EnvironmentConfig.PATHRESOUREASSET;
+import static centre.EnvironmentVariable.PIXEL;
 
+public class ImageManager {
+    public static String resourcePath = EnvironmentVariable.PATHRESOUREASSET;
+
+    // weapon
     public static BufferedImage earthShotImage;
     public static BufferedImage fireShotImage;
     public static BufferedImage metalShotImage;
@@ -20,15 +21,26 @@ public class Picture {
     public static BufferedImage woodShotImage;
     public static BufferedImage waterShotImage;
 
+    // map object
+    public static BufferedImage mapImage;
+    public static BufferedImage boxImage;
+    public static BufferedImage chestImage;
+    public static BufferedImage gateImage;
+
+
     static {
-        normalShotImage = eraserBackgroundImage(Picture.loadImage("/ball.png"),0xFFFFFFFF);
+        mapImage = ImageManager.loadImage("/tilemap.png");
 
-        earthShotImage = Picture.loadImage("/earthball.png");
-        fireShotImage = Picture.loadImage("/fireball.jpg");
-        metalShotImage = Picture.loadImage("/metalball.png");
-        waterShotImage = Picture.loadImage("/waterball.jpg");
-        woodShotImage = Picture.loadImage("/woodball.png");
+        normalShotImage = eraserBackgroundImage(ImageManager.loadImage("/ball.png"),0xFFFFFFFF);
+        earthShotImage = ImageManager.loadImage("/earthball.png");
+        fireShotImage = ImageManager.loadImage("/fireball.jpg");
+        metalShotImage = eraserBackgroundImage(ImageManager.loadImage("/metalball.png"),0xFFFFFFFF);
+        waterShotImage = ImageManager.loadImage("/waterball.jpg");
+        woodShotImage = ImageManager.loadImage("/woodball.png");
 
+        boxImage = mapImage.getSubimage(0,5* PIXEL,PIXEL*7,PIXEL);
+        gateImage = mapImage.getSubimage(0,8*PIXEL,PIXEL*15,PIXEL*2);
+        chestImage = mapImage.getSubimage(8*PIXEL,7*PIXEL,PIXEL*6,PIXEL);
     }
 
     public static BufferedImage loadImage(String path) {
@@ -53,7 +65,6 @@ public class Picture {
         for (int i = 0;i<data.length;i++){
             if (data[i] == rgb){
                 data[i] = 0;
-//                System.out.print(""+data[i]);
             }
         }
         return image;

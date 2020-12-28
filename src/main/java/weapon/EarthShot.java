@@ -2,14 +2,14 @@ package weapon;
 
 
 import objectgame.ObjectGame;
-import origin.EnvironmentConfig;
-import origin.Picture;
+import centre.EnvironmentVariable;
+import centre.ImageManager;
 
 import java.awt.*;
 
 public class EarthShot implements ObjectGame {
-    private final double speed = EnvironmentConfig.SPEED_EARTH_SHOT;
-    private final int pixel = EnvironmentConfig.PIXEL;
+    private final double speed = EnvironmentVariable.SPEED_EARTH_SHOT;
+    private final int pixel = EnvironmentVariable.PIXEL;
 
     private double positionX;
     private double positionY;
@@ -49,11 +49,6 @@ public class EarthShot implements ObjectGame {
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(Picture.earthShotImage, (int) positionX, (int) positionY, pixel, pixel, null);
-    }
-
-    @Override
-    public boolean isRemove() {
-        return false;
+        g.drawImage(ImageManager.earthShotImage, (int) positionX, (int) positionY, pixel, pixel, null);
     }
 }

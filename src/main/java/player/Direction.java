@@ -1,10 +1,6 @@
-package objectgame;
+package player;
 
 public class Direction {
-//    UP(false),
-//    DOWN(false),
-//    LEFT(false),
-//    RIGHT(false);
 
     public boolean up, down, left, right;
 

@@ -2,14 +2,14 @@ package weapon;
 
 
 import objectgame.ObjectGame;
-import origin.EnvironmentConfig;
-import origin.Picture;
+import centre.EnvironmentVariable;
+import centre.ImageManager;
 
 import java.awt.*;
 
 public class WoodShot implements ObjectGame {
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = EnvironmentConfig.SPEED_WOOD_SHOT;
+    private final int pixel = EnvironmentVariable.PIXEL;
+    private double speed = EnvironmentVariable.SPEED_WOOD_SHOT;
 
     private double positionX;
     private double positionY;
@@ -48,11 +48,6 @@ public class WoodShot implements ObjectGame {
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(Picture.woodShotImage, (int) positionX, (int) positionY, pixel, pixel, null);
-    }
-
-    @Override
-    public boolean isRemove() {
-        return false;
+        g.drawImage(ImageManager.woodShotImage, (int) positionX, (int) positionY, pixel, pixel, null);
     }
 }

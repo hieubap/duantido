@@ -2,31 +2,26 @@ package weapon;
 
 
 import objectgame.ObjectGame;
-import origin.EnvironmentConfig;
-import origin.Picture;
+import centre.EnvironmentVariable;
+import centre.ImageManager;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class WaterShot implements ObjectGame {
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = EnvironmentConfig.SPEED_WATER_SHOT;
+    private final int pixel = EnvironmentVariable.PIXEL;
+    private double speed = EnvironmentVariable.SPEED_WATER_SHOT;
 
     private double positionX;
     private double positionY;
     private DirectionWeapon direction;
     private static final BufferedImage[] shotImage = new BufferedImage[4];
 
-    @Override
-    public boolean isRemove() {
-        return false;
-    }
-
     static{
-        shotImage[0] = Picture.waterShotImage;
-        shotImage[1] = Picture.flipVertical(Picture.waterShotImage);
-        shotImage[2] = Picture.rotation90(Picture.waterShotImage);
-        shotImage[3] = Picture.flipHorizontal(shotImage[2]);
+        shotImage[0] = ImageManager.waterShotImage;
+        shotImage[1] = ImageManager.flipVertical(ImageManager.waterShotImage);
+        shotImage[2] = ImageManager.rotation90(ImageManager.waterShotImage);
+        shotImage[3] = ImageManager.flipHorizontal(shotImage[2]);
     }
     public WaterShot(double positionX, double positionY, DirectionWeapon direction) {
         this.positionX = positionX;

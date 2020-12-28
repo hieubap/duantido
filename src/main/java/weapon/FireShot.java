@@ -1,14 +1,14 @@
 package weapon;
 
 import objectgame.ObjectGame;
-import origin.EnvironmentConfig;
-import origin.Picture;
+import centre.EnvironmentVariable;
+import centre.ImageManager;
 
 import java.awt.*;
 
 public class FireShot implements ObjectGame {
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = EnvironmentConfig.SPEED_FIRE_SHOT;
+    private final int pixel = EnvironmentVariable.PIXEL;
+    private double speed = EnvironmentVariable.SPEED_FIRE_SHOT;
 
     private double positionX;
     private double positionY;
@@ -47,11 +47,6 @@ public class FireShot implements ObjectGame {
 
     @Override
     public void draw(Graphics g) {
-        g.drawImage(Picture.fireShotImage, (int) positionX, (int) positionY, pixel*4, pixel*3, null);
-    }
-
-    @Override
-    public boolean isRemove() {
-        return false;
+        g.drawImage(ImageManager.fireShotImage, (int) positionX, (int) positionY, pixel*4, pixel*3, null);
     }
 }

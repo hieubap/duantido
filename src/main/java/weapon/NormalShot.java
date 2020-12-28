@@ -1,16 +1,16 @@
 package weapon;
 
-import objectgame.ObjectGame;
-import origin.Camera;
-import origin.EnvironmentConfig;
-import origin.Picture;
+import enemy.Enemy;
+import centre.Camera;
+import centre.EnvironmentVariable;
+import centre.ImageManager;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class NormalShot implements ObjectGame {
-    private final int pixel = EnvironmentConfig.PIXEL;
-    private double speed = EnvironmentConfig.SPEED_NORMAL_SHOT;
+public class NormalShot implements Weapon {
+    private final int pixel = EnvironmentVariable.PIXEL;
+    private double speed = EnvironmentVariable.SPEED_NORMAL_SHOT;
 
     private double positionX;
     private double positionY;
@@ -20,10 +20,10 @@ public class NormalShot implements ObjectGame {
     private Camera camera;
 
     static {
-        shotImage[0] = Picture.normalShotImage;
-        shotImage[1] = Picture.flipVertical(Picture.normalShotImage);
-        shotImage[2] = Picture.rotation90(Picture.normalShotImage);
-        shotImage[3] = Picture.flipHorizontal(shotImage[2]);
+        shotImage[0] = ImageManager.normalShotImage;
+        shotImage[1] = ImageManager.flipVertical(ImageManager.normalShotImage);
+        shotImage[2] = ImageManager.rotation90(ImageManager.normalShotImage);
+        shotImage[3] = ImageManager.flipHorizontal(shotImage[2]);
     }
 
     public NormalShot(double positionX, double positionY, DirectionWeapon direction,Camera camera) {
@@ -35,7 +35,7 @@ public class NormalShot implements ObjectGame {
 
     @Override
     public void update() {
-        if (positionX < -200 || positionX > 100*EnvironmentConfig.PIXEL || positionY < -200 || positionY > 100*EnvironmentConfig.PIXEL)
+        if (positionX < -200 || positionX > 100* EnvironmentVariable.PIXEL || positionY < -200 || positionY > 100* EnvironmentVariable.PIXEL)
             isRemove = true;
 
         switch (direction) {
@@ -87,7 +87,9 @@ public class NormalShot implements ObjectGame {
     }
 
     @Override
-    public boolean isRemove() {
-        return isRemove;
+    public boolean isCollection(Enemy enemy) {
+        Rectangle rectangle = new Rectangle((int)positionX,(int)positionY, EnvironmentVariable.PIXEL, EnvironmentVariable.PIXEL);
+
+        return rectangle.contains(enemy.positionX,enemy.positionY);
     }
 }

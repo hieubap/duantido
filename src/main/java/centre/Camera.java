@@ -1,17 +1,17 @@
-package origin;
+package centre;
 
-import objectgame.Direction;
+import player.Direction;
 import objectgame.ObjectGame;
-import objectgame.Player;
+import player.Player;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import static origin.EnvironmentConfig.*;
+import static centre.EnvironmentVariable.*;
 
 public class Camera implements KeyListener, ObjectGame {
-    private int BORDER_DISTANCE = 100;
+    private final int BORDER_DISTANCE = RANGE_TO_CAMERA_MOVE;
     private double speed = SPEED_CAMERA;
     public int positionX, positionY;
     public int width, height;

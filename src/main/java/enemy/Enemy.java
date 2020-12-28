@@ -1,15 +1,15 @@
-package objectgame.enemy;
+package enemy;
 
 import map.Map;
-import objectgame.Direction;
+import player.Direction;
 import objectgame.ObjectGame;
-import origin.Camera;
-import primary.EnvironmentConfig;
+import centre.Camera;
+import centre.EnvironmentVariable;
 
 import java.awt.*;
 
 public class Enemy implements ObjectGame {
-    public final double speed = EnvironmentConfig.SPEED_ENEMY;
+    public final double speed = EnvironmentVariable.SPEED_ENEMY;
     public double positionX, positionY;
     public Direction direction;
     public Camera camera;
@@ -49,7 +49,7 @@ public class Enemy implements ObjectGame {
     public void draw(Graphics g) {
         if (camera.canDraw((int) positionX, (int) positionY)) {
             g.setColor(Color.RED);
-            g.fillRect((int) (positionX - camera.positionX), (int) (positionY - camera.positionY), EnvironmentConfig.PIXEL, EnvironmentConfig.PIXEL);
+            g.fillRect((int) (positionX - camera.positionX), (int) (positionY - camera.positionY), EnvironmentVariable.PIXEL, EnvironmentVariable.PIXEL);
         }
     }
 }

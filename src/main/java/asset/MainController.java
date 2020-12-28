@@ -1,8 +1,7 @@
 package asset;
 
-
-import origin.Camera;
-import origin.EnvironmentConfig;
+import centre.Camera;
+import centre.EnvironmentVariable;
 import weapon.*;
 
 import javax.swing.*;
@@ -23,12 +22,12 @@ public class MainController extends JPanel implements ActionListener {
 
 
     public MainController() {
-        normalShot = new NormalShot(EnvironmentConfig.WIDTH / 2, 100, DirectionWeapon.RIGHT,new Camera(0,0));
-        fireShot = new FireShot(EnvironmentConfig.WIDTH / 2, 200, DirectionWeapon.LEFT);
-        waterShot = new WaterShot(EnvironmentConfig.WIDTH / 2, 300, DirectionWeapon.RIGHT);
-        earthShot = new EarthShot(EnvironmentConfig.WIDTH / 2, 400, DirectionWeapon.LEFT);
-        metalShot = new MetalShot(EnvironmentConfig.WIDTH / 2, 500, DirectionWeapon.RIGHT);
-        woodShot = new WoodShot(EnvironmentConfig.WIDTH / 2, 600, DirectionWeapon.LEFT);
+        normalShot = new NormalShot(EnvironmentVariable.WIDTH / 2, 100, DirectionWeapon.RIGHT,new Camera(0,0));
+        fireShot = new FireShot(EnvironmentVariable.WIDTH / 2, 200, DirectionWeapon.LEFT);
+        waterShot = new WaterShot(EnvironmentVariable.WIDTH / 2, 300, DirectionWeapon.RIGHT);
+        earthShot = new EarthShot(EnvironmentVariable.WIDTH / 2, 400, DirectionWeapon.LEFT);
+        metalShot = new MetalShot(EnvironmentVariable.WIDTH / 2, 500, DirectionWeapon.RIGHT,new Camera(0,0));
+        woodShot = new WoodShot(EnvironmentVariable.WIDTH / 2, 600, DirectionWeapon.LEFT);
 //
 //        camera = new Camera(0, 0);
 //        this.setFocusable(true);
@@ -36,7 +35,7 @@ public class MainController extends JPanel implements ActionListener {
 
         frame = new JFrame("T.A.N.K");
 
-        frame.setSize(EnvironmentConfig.WIDTH, EnvironmentConfig.HEIGHT);
+        frame.setSize(EnvironmentVariable.WIDTH, EnvironmentVariable.HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
 

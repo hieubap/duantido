@@ -1,8 +1,8 @@
 package map;
 
-import origin.Camera;
-import origin.EnvironmentConfig;
-import origin.Picture;
+import centre.Camera;
+import centre.EnvironmentVariable;
+import centre.ImageManager;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -12,11 +12,11 @@ import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import static origin.EnvironmentConfig.NUMBER_SPRITE_HEIGHT;
-import static origin.EnvironmentConfig.NUMBER_SPRITE_WIDTH;
+import static centre.EnvironmentVariable.NUMBER_SPRITE_HEIGHT;
+import static centre.EnvironmentVariable.NUMBER_SPRITE_WIDTH;
 
 public class Map {
-    protected final int PIXEL = EnvironmentConfig.PIXEL;
+    protected final int PIXEL = EnvironmentVariable.PIXEL;
     protected final int NUMBER_SPRITE_X = NUMBER_SPRITE_WIDTH;
     protected final int NUMBER_SPRITE_Y = NUMBER_SPRITE_HEIGHT;
 
@@ -41,7 +41,9 @@ public class Map {
     protected Map() { // map = null
         fileSaveDataMap = new File("D:/WorkspaceEclipse/TANK/src/main/java/asset/dataMap.txt");
 
-        mapImage = Picture.loadImage("/tilemap.png");
+        mapImage = ImageManager.mapImage;
+
+
         System.out.println("width: " + (mapImage != null ? mapImage.getWidth() : "null") +
                 "; height: " + (mapImage != null ? mapImage.getHeight() : "null"));
 
@@ -85,10 +87,7 @@ public class Map {
 //                    dataMap[j][i] = Integer.parseInt(split[j]);
                     dataMap[j][i] = Integer.parseInt(split[j]);
                     isMove[j][i] = dataMap[j][i] == 101 || dataMap[j][i] == 602;
-
-                    System.out.print(dataMap[j][i] + "-");
                 }
-                System.out.println();
 
                 line = sc.nextLine();
                 i++;
