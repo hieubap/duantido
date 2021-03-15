@@ -25,6 +25,7 @@ public class MainController extends JPanel implements ActionListener {
 
 
     public MainController() {
+        //co tinh bi conflict
         normalShot = new NormalShot(EnvironmentConfig.WIDTH / 2, 100, Direction.RIGHT);
         fireShot = new FireShot(EnvironmentConfig.WIDTH / 2, 200, Direction.LEFT);
         waterShot = new WaterShot(EnvironmentConfig.WIDTH / 2, 300, Direction.RIGHT);
