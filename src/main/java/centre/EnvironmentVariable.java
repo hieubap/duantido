@@ -8,7 +8,7 @@ public class EnvironmentVariable {
     public static final int HEIGHT = 800;
     public static final int FPS = 30;
     public static final int DELAYPROCESS = 1000/FPS;
-    public static final String PATHRESOUREASSET = "D:/WorkspaceEclipse/TANK/src/main/java/asset";
+    public static final String PATHRESOUREASSET = "/Users/macintosh/Data/ME/duantido/src/main/java/asset";
     public static final Color COLOR_BACKGROUND_LIGHT = new Color(0x91b09a);
     public static final Color COLOR_BACKGROUND_BLACK = new Color(0x2f283a);
 

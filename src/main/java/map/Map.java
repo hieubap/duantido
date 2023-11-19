@@ -39,7 +39,7 @@ public class Map {
     }
 
     protected Map() { // map = null
-        fileSaveDataMap = new File("D:/WorkspaceEclipse/TANK/src/main/java/asset/dataMap.txt");
+        fileSaveDataMap = new File(EnvironmentVariable.PATHRESOUREASSET + "/dataMap.txt");
 
         mapImage = ImageManager.mapImage;
 

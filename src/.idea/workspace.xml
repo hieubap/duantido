@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="24e1cc93-64d9-45c3-8369-2e9d8fc2a0dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../TANK.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/animation/Animation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/asset/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/centre/Camera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/centre/EnvironmentVariable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/centre/ImageManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/centre/controller/MainCLass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/centre/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/centre/controller/ThreadGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/enemy/Enemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/map/EditMapTool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/map/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/objectgame/Box.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/objectgame/Chest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/objectgame/Gate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/objectgame/ObjectGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/player/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/player/Player$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/DirectionWeapon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/EarthShot$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/EarthShot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/FireShot$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/FireShot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/MetalShot$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/MetalShot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/NormalShot$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/NormalShot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/TypeWeapon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/WaterShot$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/WaterShot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/Weapon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/WoodShot$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/weapon/WoodShot.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XynWtZGvfAiKjjjkhJgBHvjOwW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24e1cc93-64d9-45c3-8369-2e9d8fc2a0dd" name="Changes" comment="" />
+      <created>1699610221521</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699610221521</updated>
+      <workItem from="1699610223218" duration="658000" />
+      <workItem from="1699610889047" duration="45000" />
+      <workItem from="1699610938292" duration="45000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
